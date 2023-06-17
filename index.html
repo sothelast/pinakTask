@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image task</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            min-height: 600px;
+        }
+    
+        .first-div{
+          position: relative;
+          background-color: rgb(213, 213, 50);
+          height: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          flex-direction: column;
+          gap: 60px;
+
+        }
+        .heding{
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 77px;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding-top: 5vw;
+        }
+        .clip-path{
+            background-color: rgb(213, 213, 50);
+            width: 480px;
+            height: 150px;
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            bottom:-6%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
+            
+        }
+        .sectond-div{
+            height: 30%;
+            background-color: red;
+        }
+        .happy-imoji{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(75, 71, 71,.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .smail-box{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-right:4px solid rgba(13, 13, 13,.8);
+            border-radius: 200px;
+
+        }
+        .smail-box::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: rgba(13, 13, 13,.8);
+            
+        }
+        .smail-box::before{
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: rgba(13, 13, 13,.8);
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+         <div class="first-div">
+            <h3 class="heding">pinak idea lab </h3>
+            <div class="happy-imoji"> 
+                <div class="smail-box"></div>
+            </div>
+            <div class="clip-path">
+               
+            </div>
+         </div>
+         <div class="sectond-div"></div>
+    </section>
+</body>
+</html>
